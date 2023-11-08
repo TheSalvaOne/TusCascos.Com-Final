@@ -1,0 +1,66 @@
+let shopItemsData = [
+  {
+    id: "producto1",
+    name: "Niza",
+    price: 45,
+    desc: "Sumérgete en un mundo de sonido envolvente con nuestros auriculares de alta calidad.Disfruta de una experiencia auditiva única y vívida mientras te sumerges en tu música favorita.‌",
+    img: "images/HeadPhones_Producto1.jpg",
+  },
+  {
+    id: "producto2",
+    name: "Sidney",
+    price: 100,
+    desc: "Vive la música con una calidad de sonido excepcional gracias a nuestros auriculares de última generación.Cada nota, cada detalle, se reproduce con una claridad impresionante, transportándote a una nueva dimensión musical.",
+    img: "images/HeadPhones_Producto2.jpg",
+  },
+  {
+    id: "producto3",
+    name: "Dubrovnik",
+    price: 25,
+    desc: "Experimenta la comodidad y el estilo con nuestroe elegantes auriculares. Diseñados con materiales de alta calidad y un ajuste perfecto,te brindan horas de uso sin molestia.",
+    img: "images/HeadPhones_Producto3.jpg",
+  },
+  {
+    id: "producto4",
+    name: "Miami",
+    price: 300,
+    desc: "Descubre la libertad de movimiento con nuestros auriculares inalámbricos.Olvídate de los cables y disfruta de la música sin restricciones, ya sea en casa, en el gimnasio o en la calle",
+    img: "images/HeadPhones_Producto4.jpg",
+  },
+  {
+    id: "producto5",
+    name: "Cancún",
+    price: 25,
+    desc: "Potencia tus entrenamientos con nuestros auriculares deportivos.Diseñados para resistir el sudor y los movimientos intensos, te brindan un sonido excepcional mientras te mantienes activo.‌",
+    img: "images/HeadPhones_Producto5.jpg",
+  },
+  {
+    id: "producto6",
+    name: "Bali",
+    price: 200,
+    desc: "Disfruta de la inmersión en tus juegos favoritos con nuestros auriculares para gaming.Escucha cada detalle y cada paso con una claridad impresionante, dándote una ventaja competitiva en cada partida.",
+    img: "images/HeadPhones_Producto6.jpg",
+  },
+  {
+    id: "producto7",
+    name: "Callao",
+    price: 450,
+    desc: "Haz que tus llamadas sean claras y nítidas con nuestros auriculares con micrófono integrado.Ya sea para reuniones de trabajo o llamadas con amigos, nunca te perderás una palabra.",
+    img: "images/HeadPhones_Producto7.jpg",
+  },
+  {
+    id: "producto8",
+    name: "Marbella",
+    price: 45,
+    desc: "Experimenta un sonido envolvente en tus películas y series favoritas con nuestros auriculares para home theater.Cada explosión, cada diálogo, se reproduce con una calidad de cine en la comodidad de tu hogar.",
+    img: "images/HeadPhones_Producto8.jpg",
+  },
+  {
+    id: "producto9",
+    name: "Honolulu",
+    price: 85,
+    desc: "Eleva tu experiencia musical con nuestros auriculares de alta fidelidad. Diseñados para audiófilos exigentes, te brindan un sonido puro y sin compromisos, permitiéndote disfrutar de la música como nunca antes.",
+    img: "images/HeadPhones_Producto9.jpg",
+  },
+
+];
