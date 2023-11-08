@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TusCascos.com</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="src/formulario.js"></script>
+    
+
+</head>
+<body>
+    <!--Cabecera-->
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <h1 class="logo "><img class="logo--cuadro" src="img/tuscascos2.svg" alt="logo">
+                <span class="visually-hidden">TusCascos</span></h1>
+            <!--Burger Menú-->
+            <input class="menu__btn" type="checkbox" id="menu__btn" />
+            <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>
+            <!--Menú-->
+            <ul class="menu">
+                <!-- <li href="#openModal" class="menu__item">LOGIN</li>
+                <li class="menu__item">REGISTRO</li>
+                <li class="menu__item">CONTACTO</li> -->
+                <a href="#openModal1" class="menu__item">REGISTRO</a>
+                <a href="#openModal2" class="menu__item">CONTACTO</a>
+                <a href="#openModal3" class="menu__item">LOGIN</a>
+                <a href="cart.html" class="menu__icono--color" aria-hidden="true">
+                    <div class="cart" >
+                      <i class="fa fa-shopping-cart"></i>
+                      <div id="cartAmount" class="cartAmount">0</div>
+                    </div>
+                  </a>
+                <!-- <a class="menu__icono--color" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> -->
+            </ul> 
+        </div>
+        
+        <!-- Modal de fiorella -->
+        <section id="openModal1" class="modalDialog">
+            <div class="ventana">
+                <h2>Inicia sesión</h2>
+                <p>Esto es un modal</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolor nostrum quaerat, amet dolore unde quos voluptatibus fuga ut tempora quisquam ipsam cupiditate, reprehenderit ullam iure natus nulla labore. Laudantium?</p>
+                <br><button>
+                    <a href="./index.html">Inicia!</a>
+                </button>
+            </div>
+        </section>
+        <section id="openModal2" class="modalDialog modalDialog__contacto">
+            <div class="ventana modal__formulario--margen">
+                <form action="modalDialog__contacto--form">
+                    <h2 class="modalDialog__titulo">CONTACTO</h2>
+                        <div class="form-field">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Email:</label>
+                            <input type="text" name="telefono" placeholder="Teléfono">
+                        </div>
+                        <div class="form-field">
+                            <label for="text">Email:</label>
+                            <textarea name="mensaje" placeholder="escriba aquí su mensaje">Escriba aquí su mensaje</textarea>
+                        </div>
+                        <span class="modalDialog__contendor__botones">
+                            <!-- <input class="shadow__btn--form" type="button" value="Enviar" id="boton" href="./index.html">
+                            <input class="shadow__btn--form" type="button" value="volver" id="boton" href="./index.html"> -->
+                            
+                                <a class="shadow__btn--form" href="./index.html">enviar</a>
+                                <a class="shadow__btn--form" href="./index.html">volver</a>
+                            
+                        </span>
+                </form>
+                
+            </div>
+        </section>
+        <!-- FORMULARIO LOGIN Ready to make CSS changes RAMESH  -->
+        <section id="openModal3" class="modalDialog">
+            <div class="ventana modalDialog__formulario ">
+                    <form action="" class="formulario" id="formulario">
+                        <!-- Grupo: Usuario -->
+                        <div class="formulario__grupo" id="grupo__usuario">
+                            <label for="usuario" class="formulario__label">Usuario</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                        </div>
+            
+                        <!-- Grupo: Nombre -->
+                        <div class="formulario__grupo" id="grupo__nombre">
+                            <label for="nombre" class="formulario__label">Nombre</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                        </div>
+            
+                        <!-- Grupo: Contraseña -->
+                        <div class="formulario__grupo" id="grupo__password">
+                            <label for="password" class="formulario__label">Contraseña</label>
+                            <div class="formulario__grupo-input">
+                                <input type="password" class="formulario__input" name="password" id="password">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                        </div>
+            
+                        <!-- Grupo: Contraseña 2 -->
+                        <div class="formulario__grupo" id="grupo__password2">
+                            <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                            <div class="formulario__grupo-input">
+                                <input type="password" class="formulario__input" name="password2" id="password2">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                        </div>
+            
+                        <!-- Grupo: Correo Electronico -->
+                        <div class="formulario__grupo" id="grupo__correo">
+                            <label for="correo" class="formulario__label">Correo Electrónico</label>
+                            <div class="formulario__grupo-input">
+                                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                        </div>
+            
+                        <!-- Grupo: Teléfono -->
+                        <div class="formulario__grupo" id="grupo__telefono">
+                            <label for="telefono" class="formulario__label">Teléfono</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                        </div>
+            
+                        <!-- Grupo: Terminos y Condiciones -->
+                        <div class="formulario__grupo" id="grupo__terminos">
+                            <label class="formulario__label">
+                                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                                Acepto los Terminos y Condiciones
+                            </label>
+                        </div>
+            
+                        <div class="formulario__mensaje" id="formulario__mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                        </div>
+            
+                        <div class="formulario__grupo formulario__grupo-btn-enviar">
+                             <button type="submit" class="shadow__btn--form">Enviar</button><!-- Este boton tenia la clase formulario-btn , por si en la ejecución del script no fuciona  -->
+                            <a class="shadow__btn--form" href="./index.html">volver</a>
+
+                            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                        </div>
+                    </form>
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- Sección Hero -->
+        <section class="herobanner">
+            <div class="wrapper">
+                <h2 class="title title--2 herobanner__title colour-white">Aquí encontrarás los cascos que se pueden permitir tus oidos.</h2>
+                <div class="herobanner__video-container">
+                    <!-- <img src="img/video-frame.png"/ alt="video frame"> -->
+                    <!-- <video width="450" height="auto" controls autoplay loop muted>
+                        <source src="media/video.mp4" type="video/mp4">
+                    </video> -->
+                </div>
+                <div class="herobanner__arrow"><a href="#containerProductos"><img src="img/arrow.svg" alt="flecha scroll"></a></div>
+            </div>
+        </section>
+            <!-- PRODUCTOS -->
+            <section class="producto" id="containerProductos">
+                <div class="wrapper">
+                    <h2 class="title title--2 colour-dark-grey">Productos</h2>
+                    <h3 class="title title--3 colour-dark-grey">Lo mejor de cada casa</h3>
+                    <div id="shop" class="contenedor__productos">
+                       
+                        
+                    </div>
+                    
+                    
+                </div>
+            </section>
+            
+            
+        </section>
+        
+    <footer class="footer bg-mid-gray">
+        <li><a href="">Cascos</a>bluetooth</li>
+        <li></li>
+        <li></li>
+    </footer>
+    
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="src/Data.js"></script>
+    <script src="src/mainCopy.js"></script>
+    <script src="src/cartCopy.js"></script>
+
+</body>
+
+</html>
