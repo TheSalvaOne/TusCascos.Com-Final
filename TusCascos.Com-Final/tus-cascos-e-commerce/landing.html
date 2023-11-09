@@ -12,42 +12,44 @@
 <body>
     <!--Cabecera-->
     <header class="header">
-        <div class="wrapper header__wrapper">
-            <h1 class="logo"><img src="img/tuscascos.svg" alt="logo hofmann"><span
-                    class="visually-hidden">TusCascos</span></h1>
+        <div class="wrapper header__wrapper" id="menu">
+            <h1 class="logo "><img class="logo--cuadro--landing" src="img/tuscascos2.svg" alt="logo">
+                <span class="visually-hidden">TusCascos</span></h1>
             <!--Burger Menú-->
             <input class="menu__btn" type="checkbox" id="menu__btn" />
-            <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>
-            <!--Menú-->
-            <!-- <ul class="menu">
-                <li class="menu__item">DIADEMA</li>
-                <li class="menu__item">PODS</li>
-                <li class="menu__item">CABLEADOS</li>
-                <li class="menu__item">CONTACTO</li>
-            </ul> -->
+            <!-- <div id="carrito-trigger" class="cart carrito--desaparecer" >
+                <i class="fa fa-shopping-cart "></i>
+                <div id="cartAmount" class="cartAmount">0</div>
+            </div> -->
+            <label class="menu__icon--landing" for="menu__btn"><span class="navicon"></span> </label>
+            
+            
         </div>
+        
+
     </header>
     <main class="">
         <!-- Vamos a poner un carrusel -->
         <section class="herobanner">
             <div class="wrapperLanding">
-                <h3 class="title title--3 herobanner__title colour-white">10%</h3>
+                <a class="porcentaje__landing">10%</aa>
                 <h2 class="title title--2 herobanner__title colour-white">Descuento en tu <br>próxima compra.</h2>
                 <div class="herobanner__video-container">
-                    <button class="producto__shadow__btn" onclick="window.location.href='index.html'">Lo quiero</button>
-                    <!-- <video width="450" height="auto" controls autoplay loop muted>
-                        <source src="media/video.mp4" type="video/mp4">
-                    </video> -->
-                </div><div class="footerLanding"></div>
-                <!-- <div class="herobanner__arrow"><a href="#containerProductos"><img src="img/arrow.svg" alt="flecha scroll"></a></div> -->
+                    <button class="shadow__btn" onclick="window.location.href='index.html'">Lo quiero</button>
             </div>
-            
         </section>
-    </main>        
-    <!-- <footer class="footerLanding bg-mid-grayLL">
-        <li><a href="">Cascos</a>bluetooth</li>
-        <li></li>
-        <li></li>
-    </footer> -->
+    </main>
+    
+        
+    <footer class="footer bg-mid-gray">
+        <a href="index.html" class="footer__tittle">TusCascos.com 2024</a>
+    </footer>
+    
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="./script/Data.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/cart.js"></script>
+
 </body>
+
 </html>
