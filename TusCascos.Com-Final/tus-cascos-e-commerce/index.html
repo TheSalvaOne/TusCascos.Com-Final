@@ -9,17 +9,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <script src="script/formulario.js"></script>
+    
 
 </head>
 <body>
     <!--Cabecera-->
     <header class="header">
-        <div class="wrapper header__wrapper">
-            <h1 class="logo"><img src="img/tuscascos2.svg" alt="logo hofmann"><span
-                    class="visually-hidden">TusCascos</span></h1>
+        <div class="wrapper header__wrapper" id="menu">
+            <h1 class="logo "><img class="logo--cuadro" src="img/tuscascos2.svg" alt="logo">
+                <span class="visually-hidden">TusCascos</span></h1>
             <!--Burger Menú-->
             <input class="menu__btn" type="checkbox" id="menu__btn" />
-            <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>
+            <!-- <div id="carrito-trigger" class="cart carrito--desaparecer" >
+                <i class="fa fa-shopping-cart "></i>
+                <div id="cartAmount" class="cartAmount">0</div>
+            </div> -->
+            <label class="menu__icon" for="menu__btn"><span class="navicon"></span> </label>
+            
             <!--Menú-->
             <ul class="menu">
                 <!-- <li href="#openModal" class="menu__item">LOGIN</li>
@@ -28,7 +35,13 @@
                 <a href="#openModal1" class="menu__item">REGISTRO</a>
                 <a href="#openModal2" class="menu__item">CONTACTO</a>
                 <a href="#openModal3" class="menu__item">LOGIN</a>
-                <a class="menu__icono--color" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <a href="#openModal4" class="menu__icono--color" aria-hidden="true">
+                    <div class="cart"  >
+                      <i class="fa fa-shopping-cart"></i>
+                      <div id="cartAmount" class="cartAmount" href="#">0</div>
+                    </div>
+                  </a>
+                <!-- <a class="menu__icono--color" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> -->
             </ul> 
         </div>
         
@@ -46,7 +59,7 @@
         <section id="openModal2" class="modalDialog modalDialog__contacto">
             <div class="ventana modal__formulario--margen">
                 <form action="modalDialog__contacto--form">
-                    <h2>CONTACTO</h2>
+                    <h2 class="modalDialog__titulo">CONTACTO</h2>
                         <div class="form-field">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre">
@@ -76,6 +89,7 @@
             </div>
         </section>
         <!-- FORMULARIO LOGIN Ready to make CSS changes RAMESH  -->
+
         <section id="openModal3" class="modalDialog">
             <div class="ventana modalDialog__formulario ">
                     <form action="" class="formulario" id="formulario">
@@ -160,8 +174,34 @@
                     </form>
             </div>
         </section>
+
+        <!-- colocación del carrito dentro de una ventana modal -->
+
+        <section class="modalDialog" id="openModal4">
+            <div class="ventana modal__formulario--margen">
+                <body>
+                    <div class="navbar">
+                      <a href="index.html">
+                        <h2>Tu cesta</h2>
+                      </a>
+                  
+                      <a href="cart.html">
+                        <div class="cart">
+                          <i class="fa fa-shopping-cart"></i>
+                          <div id="cartAmount" class="cartAmount">0</div>
+                        </div>
+                      </a>
+                  
+                    </div>
+                  
+                    <div id="label" class="text-center"></div>
+                  
+                    <div class="shopping-cart" id="shopping-cart"></div>
+                  </body>
+            </div>
+        </section>
     </header>
-    <main class="">
+    <main>
         <!-- Sección Hero -->
         <section class="herobanner">
             <div class="wrapper">
@@ -175,152 +215,33 @@
                 <div class="herobanner__arrow"><a href="#containerProductos"><img src="img/arrow.svg" alt="flecha scroll"></a></div>
             </div>
         </section>
-            <!-- esta es la parte donde van a ir los artículos que vendemos -->
+            <!-- PRODUCTOS -->
             <section class="producto" id="containerProductos">
                 <div class="wrapper">
                     <h2 class="title title--2 colour-dark-grey">Productos</h2>
                     <h3 class="title title--3 colour-dark-grey">Lo mejor de cada casa</h3>
-                    <div class="contenedor__productos">
-                        <article class="producto__individual producto">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <span class="producto__inferior--align">
-                            <div class="producto__descripcion">
-                                <a href="">NIZA</a>
-                                <p>Sumérgete en un mundo de sonido envolvente con nuestros auriculares de alta calidad.<br>Disfruta de una experiencia auditiva única y vívida mientras te sumerges en tu música favorita.‌</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                    </span>
-                        </article>
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">SYDNEY</a>
-                                <p>Vive la música con una calidad de sonido excepcional gracias a nuestros auriculares de última generación.<br>Cada nota, cada detalle, se reproduce con una claridad impresionante, transportándote a una nueva dimensión musical.</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">DUBROVNIK</a>
-                                <p>Experimenta la comodidad y el estilo con nuestros elegantes auriculares.<br>Diseñados con materiales de alta calidad y un ajuste perfecto, te brindan horas de uso sin molestia.‌</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
+                    <div id="shop" class="contenedor__productos">
+                       
                         
                     </div>
-                    <div class="contenedor__productos">
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">MIAMI</a>
-                                <p>Descubre la libertad de movimiento con nuestros auriculares inalámbricos.<br>Olvídate de los cables y disfruta de la música sin restricciones, ya sea en casa, en el gimnasio o en la calle.</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">CANCÚN</a>
-                                <p>Potencia tus entrenamientos con nuestros auriculares deportivos.<br>Diseñados para resistir el sudor y los movimientos intensos, te brindan un sonido excepcional mientras te mantienes activo.‌</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">BALI</a>
-                                <p>Disfruta de la inmersión en tus juegos favoritos con nuestros auriculares para gaming.<br>Escucha cada detalle y cada paso con una claridad impresionante, dándote una ventaja competitiva en cada partida.</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
-                        
-                    </div>
-                    <div class="contenedor__productos">
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">NIZA</a>
-                                <p>Haz que tus llamadas sean claras y nítidas con nuestros auriculares con micrófono integrado.<br>Ya sea para reuniones de trabajo o llamadas con amigos, nunca te perderás una palabra.</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">MARBELLA</a>
-                                <p>Experimenta un sonido envolvente en tus películas y series favoritas con nuestros auriculares para home theater.<br>Cada explosión, cada diálogo, se reproduce con una calidad de cine en la comodidad de tu hogar.</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
-                        <article class="producto__individual">
-                            <picture class="producto__foto">
-                                <img src="./img/casco1.jpg" alt="preciosos cascos bluetooth color rojo">
-                            </picture>
-                            <div class="producto__descripcion">
-                                <a href="">HONOLULU</a>
-                                <p>Eleva tu experiencia musical con nuestros auriculares de alta fidelidad. Diseñados para audiófilos exigentes, te brindan un sonido puro y sin compromisos, permitiéndote disfrutar de la música como nunca antes.</p></div>
-                            <div class="estrellas"></div>
-                            <button class="producto__shadow__btn">COMPRAR</button>
-                            <!-- div para seleccionar cantidad -->
-                            <div class="seleccion" id="selectorNumero"></div>
-                        </article>
-                        
-                    </div>
+                    
+                    
                 </div>
             </section>
-            <article>
-                <picture>
-                    <img src="" alt="">
-                </picture>
-                <div class="descripcion"></div>
-                <div class="estrellas"></div>
-                <button></button>
-                <!-- div para seleccionar cantidad -->
-                <div class="seleccion" id="selectorNumero"></div>
-            </article>
+            
+            
             
         </section>
         
     <footer class="footer bg-mid-gray">
-        <li><a href="">Cascos</a>bluetooth</li>
-        <li></li>
-        <li></li>
+        <a href="index.html" class="footer__tittle">TusCascos.com 2024</a>
     </footer>
-    <script src="script/formulario.js"></script>
+    
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="./script/Data.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/cart.js"></script>
 
 </body>
+
 </html>
