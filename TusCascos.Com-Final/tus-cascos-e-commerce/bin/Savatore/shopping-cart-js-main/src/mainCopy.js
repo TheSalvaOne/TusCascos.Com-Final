@@ -19,26 +19,30 @@ let generateShop = () => {
       let { id, name, desc, img, price } = x;
       let search = basket.find((y) => y.id === id) || [];
       return `
-      
       <article id=product-id-${id} class="producto__individual producto">
-        <picture class="producto__foto">
-            <img src=${img} alt="preciosos cascos bluetooth color rojo">
-        </picture>
-        <span class="producto__inferior--align">
-        <div class="producto__descripcion">
-            <a href="">${name}</a>
-            <p>${desc}</p></div>
-        <div class="estrellas"></div>
-        <h2>€ ${price} </h2>
-        <div class="buttons">
-            <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-            <div id=${id} class="quantity">${search.item === undefined ? 0 : search.item}</div>
-      <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-        <button class="producto__shadow__btn">COMPRAR</button>
-        <!-- div para seleccionar cantidad -->
-        <div class="seleccion" id="selectorNumero"></div>
-        </span>
-    </article>
+                <picture class="producto__foto">
+                    <img src=${img} alt="preciosos cascos bluetooth color rojo">
+                </picture>
+                <span class="producto__inferior--align">
+                    <div class="producto__descripcion">
+                      <a href="">${name}</a>
+                      <p>${desc}</p>
+                    </div>
+                    <div class="estrellas"></div>
+                    <div class="price-quantity">
+                        <a class="price-quantity__precio">€ ${price} </a>
+                            <div class="buttons">
+                                <p class="buttons__cantidad">Cantidad</p>
+                                <i onclick="decrement(${id})" class="fa fa-minus"></i>
+                                <div id=${id} class="quantity">
+                                    ${search.item === undefined ? 0 : search.item}
+                                </div>
+                                <i onclick="increment(${id})" class="fa fa-plus"></i>
+                            </div><br>
+                        <button class="producto__shadow__btn">COMPRAR</button>
+                    </div>
+                </span>
+            </article>
     `;
     })
     .join(""));
@@ -108,3 +112,28 @@ let calculation = () => {
 };
 
 calculation();
+
+
+
+// *****  controlar el color de la barra de menu para cambiarle el color al hacer scroll ****
+
+// Obtener la barra de menú por su ID
+const menu = document.getElementById("menu");
+
+// Punto en la página en el que deseas cambiar el color (ajusta el valor según tu diseño)
+const scrollTriggerPoint = 700; // Cambia esto al valor que desees
+
+// Agregar un evento de desplazamiento (scroll) a la ventana
+window.addEventListener("scroll", () => {
+    // Obtener la posición actual del scroll
+    const scrollY = window.scrollY;
+
+    // Verificar si el scroll ha alcanzado el punto deseado
+    if (scrollY >= scrollTriggerPoint) {
+        // Cambiar el color de fondo de la barra de menú
+        menu.style.backgroundColor ="rgb(65 57 57)"; // Reemplaza "tu_color_de_fondo" con el color deseado
+    } else {
+        // Restaurar el color de fondo inicial
+        menu.style.backgroundColor = "#0000002b"; // O el color inicial que hayas definido
+    }
+});

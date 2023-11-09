@@ -800,24 +800,54 @@ textarea {
   
   .price-quantity {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: #eee;
+    width: 100%;
+    padding: 8%;
+    flex-direction: column;
+}
+.price-quantity__precio {
+    font-family: 'montserrat', sans-serif;
+    font-size: 46px;
+    flex-wrap: nowrap;
     align-items: center;
-  }
+    font-weight: 700;
+    padding: 7% 14%;
+    text-align: center;
+}
   
-  .buttons {
+.buttons {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    font-family: 'montserrat', sans-serif;
     font-size: 16px;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-weight: 700;
+    padding: 7% 14%;
+}
+
+.buttons__cantidad {
+    font-family: 'montserrat';
+    font-size: 18px;
+    font-weight: 700;
+    padding: 3%;
+    margin: 0;
+}
+.quantity {
+    background-color:#fff;
+    padding:3% 5%;
+    border: 1px solid #A60304;
+    border-style: ridge;
+}
+  
+  .fa-plus {
+    color: #ffa67a;
   }
   
-  .bi-dash-lg {
-    color: red;
-  }
-  
-  .bi-plus-lg {
-    color: green;
+  .fa-minus {
+    color: #bb1727;
   }
   
   /**
@@ -947,27 +977,37 @@ textarea {
     .header .menu__icon {
         display: none;
     }
-    .header__wrapper{
-        position: absolute;
-        background: transparent;
+    .header__wrapper {
+        /* position: absolute; */
+        background-color: #0000002b;
         z-index: 5;
-        padding-top: 40px;  
+        padding-top: 40px;
         width: 100%;
+        /* opacity: 0.2; */
+        height: 97px;
     }
 
     /* Menú */
+
+    #menu {
+        background-color: transparent; /* Color de fondo inicial */
+        transition: background-color 0.3s; /* Agregar una transición suave para el cambio de color */
+    }
+
+
     .logo {
         position: relative;
         /* padding: 20px; */
-        margin-top: -5%;
+        margin-top: -4%;
     }
-    .menu{
+    .menu {
         transform: translateX(0);
         flex-direction: row;
         width: 70%;
         position: relative;
         background-color: transparent;
         height: auto;
+        margin-top: -17px;
     }
     .menu__item{
         font-family: 'Montserrat', sans-serif;
