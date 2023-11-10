@@ -159,7 +159,7 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
 
     return (label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
+    <h2>Total : € ${amount}</h2>
     <button class="checkout">Pagar</button>
     <button onclick="clearCart()" class="removeAll">Vaciar Carrito</button>
     `);
