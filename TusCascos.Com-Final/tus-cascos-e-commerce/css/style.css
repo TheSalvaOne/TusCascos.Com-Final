@@ -535,7 +535,7 @@ textarea {
     width:100%;
 }
 .modalDialog__contacto form {
-    width: 370px;
+    width: 399px;
 }
 
 .modalDialog__contendor__botones {
@@ -554,7 +554,7 @@ textarea {
     display:flex;
 }
 .modal__formulario--margen{
-    height: 76vh; 
+    height: 54vh; 
 }
 .form-field {
     margin-bottom: 10px; /* Agrega 10px de espacio entre los campos */
@@ -586,6 +586,10 @@ textarea {
                 0 0 25px rgb(255,166,122),
                 0 0 50px rgb(255,166,122),
                 0 0 100px rgb(255,166,122);
+                box-shadow: 0 0 5px rgb(255,166,122), 0 0 25px rgb(255,166,122), 0 0 50px rgb(255,166,122), 0 0 100px rgb(255,166,122);
+                color: #A60304;
+                font-weight: 700;
+                text-decoration: none;
   }
   /* ancho de los campos de formulario · intento 1 */
   .form-field input{
