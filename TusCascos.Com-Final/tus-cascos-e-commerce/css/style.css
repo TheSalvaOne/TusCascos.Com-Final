@@ -760,12 +760,14 @@ textarea {
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: #212529;
+    justify-content: flex-start;
+    background: var(--background);
     color: white;
     padding: 25px 60px;
     margin-bottom: 30px;
-  }
+    margin-top: -8px;
+    margin-left: -8px;
+}
   
   .cart {
     position: relative;
@@ -931,6 +933,11 @@ textarea {
     border: 2px solid #212529;
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+  .cart-item img{
+    max-width: 100%;
   }
   
   .title-price-x {

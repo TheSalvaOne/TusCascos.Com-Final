@@ -35,14 +35,14 @@ let generateCartItems = () => {
         let { img, price, name } = search;
         return `
       <div class="cart-item">
-        <img width="100" src=${img} alt="" />
+        <img class="producto__foto" src=${img} alt="" />
 
         <div class="details">
         
-          <div class="title-price-x">
+          <div class="producto__descripcion">
             <h4 class="title-price">
               <p>${name}</p>
-              <p class="cart-item-price">€ ${price}</p>
+              <p class="price-quantity__precio">€ ${price}</p>
             </h4>
             <i onclick="removeItem(${id})" class="fa fa-shopping-cart"></i>
           </div>
@@ -55,7 +55,7 @@ let generateCartItems = () => {
             </div>
           </div>
 
-          <h3>$ ${item * price}</h3>
+          <p class="price-quantity__precio">€ ${item * price}</p>
         
         </div>
       </div>
