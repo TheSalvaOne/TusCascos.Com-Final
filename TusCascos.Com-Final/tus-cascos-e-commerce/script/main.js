@@ -39,7 +39,7 @@ let generateShop = () => {
                                 </div>
                                 <i onclick="increment(${id})" class="fa fa-plus"></i>
                             </div><br>
-                        <button class="producto__shadow__btn">COMPRAR</button>
+                        <button  onclick="window.location.href='index.html'" class="producto__shadow__btn">COMPRAR</button>
                     </div>
                 </span>
             </article>

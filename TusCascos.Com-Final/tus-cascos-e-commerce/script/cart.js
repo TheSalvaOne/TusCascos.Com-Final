@@ -35,27 +35,27 @@ let generateCartItems = () => {
         let { img, price, name } = search;
         return `
       <div class="cart-item">
-        <img width="100" src=${img} alt="" />
+        <img class="producto__foto" src=${img} alt="" />
 
         <div class="details">
         
-          <div class="title-price-x">
+          <div class="producto__descripcion">
             <h4 class="title-price">
               <p>${name}</p>
-              <p class="cart-item-price">€ ${price}</p>
+              <p class="price-quantity__precio">€ ${price}</p>
             </h4>
-            <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
+            <i onclick="removeItem(${id})" class="fa fa-shopping-cart"></i>
           </div>
 
           <div class="cart-buttons">
             <div class="buttons">
-              <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+              <i onclick="decrement(${id})" class="fa fa-minus"></i>
               <div id=${id} class="quantity">${item}</div>
-              <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+              <i onclick="increment(${id})" class="fa fa-plus"></i>
             </div>
           </div>
 
-          <h3>$ ${item * price}</h3>
+          <p class="price-quantity__precio">€ ${item * price}</p>
         
         </div>
       </div>
@@ -65,9 +65,9 @@ let generateCartItems = () => {
   } else {
     ShoppingCart.innerHTML = "";
     label.innerHTML = `
-    <h2>Cart is Empty</h2>
+    <h2>No hay productos en tu carrito de compra :(</h2>
     <a href="index.html">
-      <button class="HomeBtn">Back to Home</button>
+      <button class="HomeBtn">Volver al Inicio</button>
     </a>
     `;
   }
@@ -159,9 +159,9 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
 
     return (label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
-    <button class="checkout">Checkout</button>
-    <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+    <h2>Total : € ${amount}</h2>
+    <button class="checkout">Pagar</button>
+    <button onclick="clearCart()" class="removeAll">Vaciar Carrito</button>
     `);
   } else return;
 };

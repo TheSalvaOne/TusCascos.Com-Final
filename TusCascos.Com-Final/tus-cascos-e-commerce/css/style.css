@@ -475,22 +475,23 @@ body {
     background-color: #fff;
 } */
 
-/* mODAL FIORELLA*/
+/* MODAL FIORELLA*/
 
 .modalDialog {
-	position: fixed;
+    position: fixed;
     font-family: 'Montserrat', sans-serif;
     top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    display: flex;
 }
 .modalDialog:target {
 	opacity:1;
@@ -557,10 +558,10 @@ textarea {
     height: 54vh; 
 }
 .form-field {
-    margin-bottom: 10px; /* Agrega 10px de espacio entre los campos */
-    max-width:86%;
+    margin-bottom: 34px;
+    max-width: 343px;
     background: rgba(0, 0, 0, 0.2) !important;
-  }
+}
 .shadow__btn--form {
     padding: 10px 20px;
     border: none;
@@ -620,12 +621,11 @@ textarea {
 	margin: auto;
 	padding: 40px;
 }
-
-
 .formulario {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
 }
 
 .formulario__label {
@@ -703,9 +703,9 @@ textarea {
 }
 
 .formulario__grupo-btn-enviar {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .formulario__btn {
@@ -764,12 +764,14 @@ textarea {
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: #212529;
+    justify-content: flex-start;
+    background: var(--background);
     color: white;
     padding: 25px 60px;
     margin-bottom: 30px;
-  }
+    margin-top: -8px;
+    margin-left: -8px;
+}
   
   .cart {
     position: relative;
@@ -827,18 +829,20 @@ textarea {
   
   .details {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
     gap: 10px;
+    align-items: center;
   }
   
   .price-quantity {
-    display: flex;
+    display: flex; 
     flex-wrap: nowrap;
     background-color: #eee;
     width: 100%;
     padding: 8%;
     flex-direction: column;
+    align-items: center;
 }
 .price-quantity__precio {
     font-family: 'montserrat', sans-serif;
@@ -935,6 +939,11 @@ textarea {
     border: 2px solid #212529;
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+  .cart-item img{
+    max-width: 100%;
   }
   
   .title-price-x {
