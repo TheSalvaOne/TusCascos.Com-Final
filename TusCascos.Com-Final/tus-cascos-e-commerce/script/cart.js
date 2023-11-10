@@ -65,9 +65,9 @@ let generateCartItems = () => {
   } else {
     ShoppingCart.innerHTML = "";
     label.innerHTML = `
-    <h2>Cart is Empty</h2>
+    <h2>No hay productos en tu carrito de compra :(</h2>
     <a href="index.html">
-      <button class="HomeBtn">Back to Home</button>
+      <button class="HomeBtn">Volver al Inicio</button>
     </a>
     `;
   }
@@ -159,9 +159,9 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
 
     return (label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
-    <button class="checkout">Checkout</button>
-    <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+    <h2>Total : € ${amount}</h2>
+    <button class="checkout">Pagar</button>
+    <button onclick="clearCart()" class="removeAll">Vaciar Carrito</button>
     `);
   } else return;
 };
