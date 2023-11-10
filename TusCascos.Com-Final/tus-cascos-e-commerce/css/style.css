@@ -558,10 +558,10 @@ textarea {
     height: 76vh; 
 }
 .form-field {
-    margin-bottom: 10px; /* Agrega 10px de espacio entre los campos */
-    max-width:86%;
+    margin-bottom: 34px;
+    max-width: 343px;
     background: rgba(0, 0, 0, 0.2) !important;
-  }
+}
 .shadow__btn--form {
     padding: 10px 20px;
     border: none;
