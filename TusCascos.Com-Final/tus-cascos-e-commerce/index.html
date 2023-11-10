@@ -48,14 +48,30 @@
         <!-- Modal de fiorella -->
         <section id="openModal1" class="modalDialog">
             <div class="ventana">
-                <h2>Inicia sesión</h2>
-                <p>Esto es un modal</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolor nostrum quaerat, amet dolore unde quos voluptatibus fuga ut tempora quisquam ipsam cupiditate, reprehenderit ullam iure natus nulla labore. Laudantium?</p>
-                <br><button>
-                    <a href="./index.html">Inicia!</a>
+                <!-- Grupo: Usuario -->
+                    <div class="formulariogrupo" id="grupousuario">
+                        <label for="usuario" class="formulariolabel">Usuario</label>
+                        <div class="formulariogrupo-input">
+                            <input type="text" class="formularioinput" name="usuario" id="usuario" placeholder="john123">
+                            <i class="formulariovalidacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formularioinput-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                    </div>
+                <!-- Grupo: Contraseña -->
+                        <div class="formulariogrupo" id="grupopassword">
+                            <label for="password" class="formulariolabel">Contraseña</label>
+                            <div class="formulariogrupo-input">
+                                <input type="password" class="formularioinput" name="password" id="password">
+                                <i class="formulariovalidacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formularioinput-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                        </div>
+                <button class="shadow__btn--form">
+                    <a href="./index.html">ENviar</a>
                 </button>
             </div>
         </section>
+        <!-- MOdal del Yolanda -->
         <section id="openModal2" class="modalDialog modalDialog__contacto">
             <div class="ventana modal__formulario--margen">
                 <form action="modalDialog__contacto--form">
